@@ -15,9 +15,7 @@ import 'helper.dart';
 class JsonStorage {
   late JSONBridge jsonBridge;
   JsonStorage() {
-    if (Platform.environment['FLUTTER_TEST'] == 'true') {
-      jsonBridge = JSONBridge()..init(fileName: 'config', dir: 'test');
-    } else if (defaultTargetPlatform == TargetPlatform.android ||
+    if (defaultTargetPlatform == TargetPlatform.android ||
         defaultTargetPlatform == TargetPlatform.iOS ||
         defaultTargetPlatform == TargetPlatform.windows ||
         defaultTargetPlatform == TargetPlatform.linux ||
